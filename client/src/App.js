@@ -10,7 +10,7 @@ import { ApplyDoctor } from './pages/ApplyDoctor';
 import { Notification } from './pages/Notification';
 import { ListOfUsers} from './pages/Admin/ListOfUsers';
 import { ListOfDocters } from './pages/Admin/ListOfDocters';
-import { DrProfile } from './pages/Doctor/DrProfile';
+import { Profile } from './pages/Doctor/Profile';
 import { BookAppointment } from './pages/BookAppointment';
 import { Appointment } from './pages/Appointment';
 import { DoctorAppointment } from './pages/Doctor/DoctorAppointment';
@@ -36,7 +36,7 @@ import { DoctorAppointment } from './pages/Doctor/DoctorAppointment';
          <Route path='/notifications'element={ <ProtectedRoute> <Notification /> </ProtectedRoute> }/>
          <Route path='/admin/userslist'element={ <ProtectedRoute> <ListOfUsers /> </ProtectedRoute> }/>
          <Route path='/admin/doctorslist'element={ <ProtectedRoute> <ListOfDocters/> </ProtectedRoute> }/>
-         <Route path='/doctor/profile/:userId'element={ <ProtectedRoute> <DrProfile /> </ProtectedRoute> }/>
+         <Route path='/doctor/profile/:userId'element={ <ProtectedRoute> <Profile /> </ProtectedRoute> }/>
          <Route path="/book-appointment/:doctorId"element={ <ProtectedRoute><BookAppointment /> </ProtectedRoute>}/>
          <Route path="/appointments"element={<ProtectedRoute> < Appointment /> </ProtectedRoute> } />
          <Route path="/doctor/appointments"element={<ProtectedRoute>< DoctorAppointment /></ProtectedRoute>}/>  

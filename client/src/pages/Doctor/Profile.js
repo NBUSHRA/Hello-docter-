@@ -7,7 +7,7 @@ import { showLoading, hideLoading } from "../../redux/alertSlice";
 import toast from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
 
-export const DrProfile = () => {
+export const Profile = () => {
   const { user } = useSelector((state) => state.user);
   const params = useParams();
   const [doctor, setDoctor] = useState(null);
