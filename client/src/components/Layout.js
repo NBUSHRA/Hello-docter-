@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
- import '../layout.css';
+import '../layout.css';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
- import {Badge } from 'antd';
-
-// import Badge from '@mui/material/Badge';
-
+import {Badge } from 'antd';
 export const Layout = ({children}) => {
 
     const [collapsed, setCollapsed] = useState(false);
@@ -30,11 +27,6 @@ export const Layout = ({children}) => {
             path: "/apply-doctor",
             icon: "ri-hospital-line",
           },
-          {
-            name: "Profile",
-            path: `/doctor/profile/${user?._id}`,
-            icon: "ri-user-line",
-          },
          
     ];
     const doctorMenu = [
@@ -50,12 +42,7 @@ export const Layout = ({children}) => {
       },
       {
         name: "Profile",
-        path: '/profile/',
-        icon: "ri-user-line",
-      },
-      {
-        name: "Logout",
-        path: '/logout',
+        path: `/doctor/profile/${user?._id}`,
         icon: "ri-user-line",
       },
     ];
@@ -84,7 +71,7 @@ export const Layout = ({children}) => {
        <div className='d-flex layout'>
          <div className="sidebar">
          <div className="sidebar-header">
-            <h1 className="logo">ESPACE-SANTE</h1>
+            <h1 className="logo">S-H</h1>
             <h1 className="role">{role}</h1>
           </div>
           <div className='menu'>
