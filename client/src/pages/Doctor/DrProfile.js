@@ -18,7 +18,7 @@ export const DrProfile = () => {
     try {
       dispatch(showLoading());
 
-      fetch("http://localhost:3001/api/doctor/update-doctor-profile", {
+      fetch("/api/doctor/update-doctor-profile", {
         method: 'post',
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -54,7 +54,7 @@ export const DrProfile = () => {
   const getDoctorData = async () => {
     try {
       dispatch(showLoading());
-      fetch("http://localhost:3001/api/doctor/get-doctor-info-by-user-id", {
+      fetch("/api/doctor/get-doctor-info-by-user-id", {
         method: 'post',
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: params.userId, })
